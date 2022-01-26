@@ -1,0 +1,206 @@
+.header__nav {
+  padding: 0px 10px 0px 0px;
+  grid-area: headerNav;
+  background: #21232F;
+  border-radius: 0px 0px 12px 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  @media (max-width:1250px){
+    width: 100%;
+    height: 100%;
+  }
+  button.nav__list-opener{
+    display: none;
+    @media (max-width:1100px){
+      margin: 0px 0px 0px 20px;
+      display: flex;
+      background: none;
+      border: none;
+      outline: none;
+      color: #E9E9E9;
+    }
+  }
+  ul.nav__list {
+    padding: 24px 30px 24px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width:1100px){
+      display: none;
+      &.visible{
+        z-index: 3;
+        top: 140px;
+        background: #21232F;
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+        position: absolute;
+        li.nav__item{
+          margin: 0px 0px 10px 0px;
+        }
+      }
+    }
+
+    li.nav__item {
+      margin: 0px 22px 0px 0px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      svg {
+        transition: all 0.3s ease 0s;
+        fill: #474754;
+        margin: 0px 8px 0px 0px;
+
+        path {
+          fill: #474754;
+        }
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #CECFDE;
+      }
+
+      span.new {
+        margin: 0px 0px 0px 8px;
+        font-weight: 800;
+        font-size: 8px;
+        line-height: 10px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 3px 5px 3px 5px;
+        background: #EA639C;
+        border-radius: 4px;
+      }
+
+      &:hover {
+        svg {
+          fill: #FFBD98;
+
+          path {
+            fill: #FFBD98;
+          }
+        }
+
+        span {
+          color: #FFBD98;
+        }
+
+        span.new {
+          background: #88BE87;
+          color: #CECFDE;
+        }
+      }
+    }
+  }
+
+  .control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .control__notification {
+      position: relative;
+      cursor: pointer;
+
+      &:hover{
+      }
+
+      img {}
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        padding: 3px 5px 3px 5px;
+        background: #343849;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #888C97;
+      }
+    }
+
+    .control__user {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "userImg userName"
+        "userImg userBalance";
+
+      .control__user-img {
+        grid-area: userImg;
+        margin: 0px 14px 0px 0px;
+      }
+
+      .controll__user-name {
+        grid-area: userName;
+        font-size: 16px;
+        line-height: 19px;
+        color: #E9E9E9;
+      }
+
+      .control__balance {
+        grid-area: userBalance;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #63DEB1;
+      }
+    }
+
+    .control__refill {
+      margin: 0px 0px 0px 22px;
+      background: #5CBB98;
+      padding: 12px 20px 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      color: #F1FFDE;
+      outline: none;
+      border: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover{
+        background: #4af7b7;
+      }
+
+      img {
+        margin: 0px 0px 0px 17px;
+      }
+    }
+
+    .controll__exit {
+      margin: 0px 0px 0px 10px;
+      padding: 12px 12px 12px 12px;
+      border: none;
+      outline: none;
+      background: #272A38;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+
+      &:hover{
+        background: #3e4666;
+      }
+      img {}
+    }
+  }
+}

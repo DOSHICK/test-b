@@ -1,0 +1,15 @@
+.header__roulet{
+  grid-area: headerRoulet;
+  padding: 0px 0px 0px 0px;
+  max-height: 104px;
+  img{
+    overflow: hidden;
+    display: block;
+    max-width: 100%;
+    max-height: 104px;
+
+  }
+  @media (max-width:1250px){
+    display: none;
+  }
+}

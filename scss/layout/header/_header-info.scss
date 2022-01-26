@@ -1,0 +1,131 @@
+.header__info {
+  grid-area: headerInfo;
+  padding: 16px 25px 15px 16px;
+  background: #1D1E2A;
+  // min-width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width:1250px) {
+    align-items: center;
+    height: 100%;
+  }
+
+  .info__block {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width:1250px) {}
+
+    .info__lang {
+      cursor: pointer;
+      margin: 0px 11px 0px 0px;
+      padding: 10px 5px 10px 10px;
+      display: flex;
+      max-width: 75px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background: #242633;
+      border-radius: 10px;
+
+      span {
+        margin: 0px 10px 0px 8px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        color: #CECFDE;
+      }
+    }
+
+    .info__sound {
+      cursor: pointer;
+      position: relative;
+      width: 36px;
+      height: 36px;
+
+      img {
+        position: relative;
+      }
+
+      span {
+        padding: 2px 3px 3px 3px;
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 7px;
+        line-height: 8px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        background: #88BE87;
+        border-radius: 4px;
+      }
+    }
+
+    .stats__list {
+      margin: 0px 0px 0px 33px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media (max-width:1250px) {
+        display: none;
+      }
+
+      .stats__item {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 22px 0px 0px;
+
+        img.stats__img {
+          margin: 0px 10px 0px 0px;
+          width: 22px;
+          height: 22px;
+        }
+
+        .stats__text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .stats__title {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            color: #CECFDE;
+          }
+
+          .stats__name {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: uppercase;
+            color: #60627A
+          }
+        }
+      }
+    }
+
+    &.contacts {
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      .contacts__item {
+        margin: 0px 0px 0px 13px;
+      }
+    }
+
+
+  }
+}

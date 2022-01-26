@@ -1,0 +1,116 @@
+.catalog__section {
+  background: #1D1E2A;
+  position: relative;
+
+  width: 100%;
+  // height: 100vh;
+
+  .catalog__title {
+    position: absolute;
+    width: 484px;
+    height: 202px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../img/main/catalog/catalog-header.png');
+    background-size: cover;
+
+  }
+
+  .catalog__list {
+    border-top: 8px #262533 solid;
+    padding: 80px 0px 190px 0px;
+    max-width: 1860px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .catalog__item {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+      img{
+        @media (max-width:700px){
+          width: 250px;
+          height: 250px;
+        }
+        @media (max-width:550px){
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .catalog__price {
+        position: absolute;
+        top: 260px;
+        left: 50%;
+        min-width: 108.11px;
+        transform: translateX(-50%);
+        @media (max-width:700px){
+          top: 220px;
+        }
+        @media (max-width:550px){
+          top: 160px;
+        }
+
+        .catalog__price_current {
+          position: absolute;
+          min-width: 64px;
+          min-height: 38px;
+          max-width: 64px;
+          ;
+          width: 64px;
+          height: 38px;
+          padding: 7px 24px 7px 17px;
+          background: #EEAC64;
+          border-radius: 2px;
+          background: url('../img/main/catalog/pricing_current.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          font-family: DIN Pro;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 23px;
+          color: #231B02;
+        }
+
+        .catalog__price_old {
+          position: absolute;
+          top: -10px;
+          right: 0;
+          max-width: 53px;
+          max-height: 32px;
+          width: 64px;
+          height: 38px;
+          padding: 6px 14px 7px 15px;
+          background: #EEAC64;
+          border-radius: 2px;
+          background: url('../img/main/catalog/pricing_old.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          font-family: DIN Pro;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+          color: #FFFFFF;
+        }
+      }
+
+      .catalog__name {
+        font-family: DIN Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 21px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

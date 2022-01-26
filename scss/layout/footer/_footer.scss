@@ -1,0 +1,13 @@
+// footer.scss
+footer.footer{
+  @import "./footer-header";
+  @import "./footer-body";
+
+  background: linear-gradient(180deg, #17171F 0%, #14141C 100%);
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+  color: #ffffff;
+  .footer__container{
+    max-width: 1550px;
+  }
+}
